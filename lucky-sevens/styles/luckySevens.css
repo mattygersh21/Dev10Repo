@@ -1,0 +1,45 @@
+/* 
+Creator: Matthew Gerszewski
+Date created: Jan 16, 2020
+Most recent revision: 0
+*/
+
+h1 {
+  color: red;
+  animation-name: lucky-sevens-pulse;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lucky-sevens-pulse {
+  0% {color: red;}
+  50% {color: blue;}
+}
+
+/* Implement an animation event that is triggered by pressing the play button. The animation should do some type of color roll that starts and finishes with the text as red. The color should roll through the words "Lucky Sevens" at a 30 or 45 degree angle. */
+
+table, td {
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+table {
+  border: 3px solid black;
+  display: none;
+}
+
+#resultsHead {
+  display: none;
+}
+
+tbody tr:nth-child(1) {
+  background-color: lightgray;
+}
+
+tbody tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+footer {
+  text-align: center;
+}
