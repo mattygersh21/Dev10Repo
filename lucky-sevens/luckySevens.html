@@ -3,6 +3,7 @@
 <!-- 
   Name: Matthew Gerszewski
   Date Created: Jan 16, 2020
+  Date last modified: Jan 18, 2020
   Most recent revision: 0
  -->
 
@@ -25,7 +26,7 @@
   <body>
     <div class="container">
       
-      <!-- Lucky Sevens row. -->
+      <!-- Lucky Sevens header -->
       <div class="row text-center">
         <div class="col-12 mt-4 mb-2">
           <header>
@@ -34,11 +35,12 @@
         </div>
       </div>
 
+      <!-- Form section -->
       <div class="row d-flex justify-content-center">
-        <form name="startingBetForm" onsubmit="return validate();">
+        <form name="startingBetForm" onsubmit="return validate();" action="fake.html" method="POST">
           <div class="form-inline">
             <label for="startingBet" class="mx-4">Starting Bet:</label>
-            <input type="number" class="form-control text-center w-50" id="startingBet">
+            <input type="number" class="form-control text-center w-50" id="startingBet" placeholder="$0.00">
           </div>
           <div class="text-center mt-4">
             <button class="btn" type="submit" id="playButton">Play</button>
@@ -46,6 +48,7 @@
         </form>
       </div>
 
+      <!-- Result section -->
       <div class="row text-center">
         <div class="col-12 mt-2" id="resultsHead">
           <hr />
@@ -73,14 +76,15 @@
                 <td>$<span id="maxAmount"></span></td>
               </tr>
               <tr>
-                <td>Rolls Count at Highest Amount Won</td>
+                <td>Roll Count at Highest Amount Won</td>
                 <td><span id="rollCountAtMaxAmount"></span></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
+      
+      <!-- Footer section -->
       <div class="row">
         <div class="col-12 mt-3">
           <footer>
