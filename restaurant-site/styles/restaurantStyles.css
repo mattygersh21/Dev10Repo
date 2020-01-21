@@ -1,0 +1,61 @@
+/* 
+Creator: Matthew Gerszewski
+Date created: Jan 13, 2020
+Date last modified: Jan 21, 2020
+Most recent revision: 0
+*/
+
+noscript {
+  background-color: limegreen;
+  font-size: 2.5em;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.jumbotron {
+  background-color: #f7f7f7;
+}
+
+a {
+  background-color: #F7F7F7;
+  margin: 0em 0.5em;
+}
+
+#menuNav a {
+  background-color: #F7F7F7;
+}
+
+.carousel-indicators .active {
+  background-color: green;
+}
+
+form {
+  background-color: hsla(27, 34%, 83%, 1);
+  padding: 1px 0px 10px 0px;
+}
+
+/* has-error class was replaced by HTML5 form validation via CSS's :invalid and :valid pseudo classes (https://getbootstrap.com/docs/4.0/migration/#forms-1), however a has-error class name was used to indicate an input error to a user. */
+.has-error input[type=text] {
+  border: 2px solid red;
+}
+
+/* has-error class was replaced by HTML5 form validation via CSS's :invalid and :valid pseudo classes (https://getbootstrap.com/docs/4.0/migration/#forms-1), however a has-error class name was used to indicate an input error to a user. */
+.has-error input[type=email] {
+  border: 2px solid red;
+}
+
+h4 {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+label.col-sm-5 {
+  justify-content: flex-end;
+}
+
+legend.col-form-label {
+  text-align: right;
+}

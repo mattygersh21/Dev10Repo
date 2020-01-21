@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<!-- 
+  Name: Matthew Gerszewski
+  Date created: Jan 10, 2020
+  Date last modified: Jan 21, 2020
+  Most recent revision: 0
+ -->
+
+<html lang="en">
+  <head>
+    <!-- Ensures that browser correctly displays Bootstrap fonts. -->
+    <meta charset="utf-8">
+    <!-- Tells browser to look at size of user's window, which will then use that info to determine how to apply Bootstrap's media queries. -->
+    <meta name="viewport" contact="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Home page</title>
+
+    <!-- Bootstrap CDN https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Included reference to external fonts and external style sheet last to ensure they are the final styles read by the browser (assuming there is no internal style sheet applied). -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri:400,700&display=swap&subset=malayalam" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css" />
+    <style>
+      h1 {
+        font-family: 'Gayathri', sans-serif;
+      }
+      nav a:visited {
+        color: #A80000;
+      }
+      nav a:hover {
+        font-weight: bold;
+      }
+      nav a:active {
+        text-decoration: none;
+      }
+      #imageDescriptionSection, #carouselSection {
+        background-color: hsla(41, 66%, 89%, 1);
+      }
+    </style>
+  </head>
+
+  <main>
+    <body class="container">
+      <noscript>Dear user,<br />JavaScript is not enabled on your computer. For the best possible experience, please enable JavaScript in your web browser. :)</noscript>
+
+        <header class="mt-4 jumbotron col-md-12">
+          <h1>Matty's Magnificent Munchies</h1>
+          <h3>We're opening a new location!</h2>
+          <h5>Check it out Feb 17, 2020, in downtown Minneapolis.</h3>
+        </header>
+
+      <nav class="border-top border-bottom py-3 mb-2">
+        <a class="btn badge-pill" href="home.html"><i class="fa fa-home"></i></a>
+        <a class="btn badge-pill" href="menu.html">Menu</a>
+        <a class="btn badge-pill" href="contact-us.html">Contact Us</a>
+      </nav>
+
+      <section class="container" id="imageDescriptionSection">
+        <article class="row pt-3">
+          <img style="display: block; margin: auto;" src="images/eat-3614411_1920-resized.jpg" alt="Matty's Munchies buffet image" />
+        </article>
+        
+        <article class="row mt-3 col-md-5 mx-auto">
+          <p>Bring your appetite!<br />
+          Come join Matty and your friends for some magnificient munchies! We have a buffet and many delicious prepared meals waiting for you to enjoy. Check out our menu in the link above!</p>
+        </article>
+      </section>
+
+      <section class="container py-3" id="carouselSection">
+        <div class="row col-md-12 mx-auto">
+          <!-- Start template section from the 'With indicators portion of webpage https://getbootstrap.com/docs/4.1/components/carousel/ -->
+          <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="images/buffet-315691_1280 - resized.jpg" alt="Buffet Indian food image">
+                  <div class="carousel-caption">
+                    <h4>We're opening a new location!</h4>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/pizza-3007395_1920 - resized - darker.jpg" alt="Pizza image">
+                  <div class="carousel-caption">
+                    <h4>We're rolling out our seasonal menu, with special options for this season.</h4>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/morning-819362_1920 - resized.jpg" alt="Coffee image">
+                  <div class="carousel-caption">
+                    <h4>The drink of the Month is SG Special Brew.</h4>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+          <!-- End template section from the 'With indicators' section of webpage https://getbootstrap.com/docs/4.1/components/carousel/ -->
+        </div>
+      </section>
+
+      <footer>
+        <hr />
+        <p>Address: 2121 Greenway Ave, Minneapolis, MN, 55405</p>
+        <p>Phone number: 612-956-1577</p>
+        <p>The <a href="https://pixabay.com/" target="_blank">image files used above are from Pixabay</a> and are <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">distributed under a CC0 license.</a></p>
+        <p>&copy; 2020 Matthew Gerszewski. All rights reserved.</p>
+        <hr />
+      </footer>
+
+    <!-- CDN links https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <!-- Script elements added at end of html body to ensure quick loading of page and improve user experience. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+  </main>
+</html>

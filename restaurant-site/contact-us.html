@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!-- 
+  Name: Matthew Gerszewski
+  Date Created: Jan 10, 2020
+  Date last modified: Jan 21, 2020
+  Most recent revision: 0
+ -->
+
+<html lang="en">
+  <head>
+    <!-- Ensures that browser correctly displays Bootstrap fonts. -->
+    <meta charset="utf-8">
+    <!-- Tells browser to look at size of user's window, which will then use that info to determine how to apply Bootstrap's media queries. -->
+    <meta name="viewport" contact="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Contact Us</title>
+
+    <!-- Bootstrap CDN https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Included reference to external fonts and external style sheet last to ensure they are the final styles read by the browser (assuming there is no internal style sheet applied). -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri:400,700&display=swap&subset=malayalam" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/restaurantStyles.css" />
+    <style>
+      h1 {
+        font-family: 'Gayathri', sans-serif;
+      }
+      nav a:visited {
+        color: #A80000;
+      }
+      nav a:hover {
+        font-weight: bold;
+      }
+      nav a:active {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <noscript>Dear user,<br />JavaScript is not enabled on your computer. For the best possible experience, please enable JavaScript in your web browser. :)</noscript>
+    
+    <header class="mt-4 jumbotron col-md-12">
+      <h1>Matty's Magnificent Munchies</h1>
+      <h3>We're opening a new location!</h2>
+      <h5>Check it out Feb 17, 2020, in downtown Minneapolis.</h3>
+    </header>
+
+    <nav class="border-top border-bottom py-3 mb-2">
+      <a class="btn badge-pill" href="home.html"><i class="fa fa-home"></i></a>
+      <a class="btn badge-pill" href="menu.html">Menu</a>
+      <a class="btn badge-pill" href="contact-us.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+      <h2 class="text-center">Contact Information Form</h2>
+      <p>If you have any questions for our team, please let us know. We want to serve you and we will be best able to do so if you are descript in your needs. We'll need your name and email to be able to respond to you, but any further detail you can provide will help us provide you with the most delightful experience. Thank you so much for choosing to dine with us!</p>
+      <form name="contactForm" onsubmit="return validateForm();" action="" method="POST">
+        <div class="container col-12">
+          <div class="form-inline row mt-3">
+            <label class="col-sm-5 font-weight-bold" for="name">Name:</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" id="name" name="name" /><br />
+            </div>
+          </div>
+            <div class="form-inline row mt-3">
+              <label class="col-sm-5 font-weight-bold" for="email">Email:</label>
+              <div class="col-sm-7">
+                <input class="form-control" type="email" id="email" name="email" /><br />
+              </div>
+            </div>
+          <div class="form-inline row mt-3">
+            <label class="col-sm-5" for="phone">Phone:</label>
+            <div class="col-sm-7">
+              <input class="form-control" for="text" id="phone" name="phone" /><br />
+            </div>
+          </div>
+          <div class="form-inline row mt-3">
+            <label class="col-sm-5" for="reasonForInquiry">Reason for Inquiry:</label>
+            <div class="col-sm-7">
+              <select class="form-control" id="reasonForInquiry" name="reasonForInquiry">
+                <option value="default" selected>Catering</option>
+                <option value="privateParty">Private Party</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select><br />
+            </div>
+          </div>
+          <div class="form-inline row mt-3">
+            <label class="col-sm-5" for="additionalInformation">Additional Information:</label>
+            <div class="col-sm-7">
+              <textarea class="form-control" id="additionalInformation" name="additionalInformation"></textarea><br />
+            </div> 
+          </div>
+        </div>
+        
+        <div class="container col-12">
+
+          <fieldset class="form-inline mt-3">
+            <div class="row">
+              <legend class="col-form-label col-sm-5">Have you been to the restaurant?</legend>
+              <div class="col-sm-7">
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="no" name="visited" value="No" checked />
+                  <label class="form-check-label" for="no">No</label>
+                </div>
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="yes" name="visited" value="Yes" />
+                  <label class="form-check-label" for="yes">Yes</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        
+          <fieldset class="form-inline mt-3">
+            <div class="row">
+              <legend class="col-form-label col-sm-5">Best days to contact you:</legend>
+                <div class="col-sm-7">
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="monday" name="contactDays" value="monday" />
+                    <label class="form-check-label" for="monday">M</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="tuesday" name="contactDays" value="tuesday" />
+                    <label class="form-check-label" for="tuesday">T</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="wednesday" name="contactDays" value="wednesday" />
+                    <label class="form-check-label" for="wednesday">W</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="thursday" name="contactDays" value="thursday" />
+                    <label class="form-check-label" for="thursday">Th</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="friday" name="contactDays" value="friday" />
+                    <label class="form-check-label" for="friday">F</label>
+                  </div>
+                </div>
+            </div>
+          </fieldset>
+          
+        </div>
+
+        <div class="form-inline row">
+          <div class="col-sm-12 text-center">
+            <button class="btn btn-default" type="submit">Send Request</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <footer>
+        <hr />
+        <p>Address: 2121 Greenway Ave, Minneapolis, MN, 55405</p>
+        <p>Phone number: 612-956-1577</p>
+        <p>&copy; 2020 Matthew Gerszewski. All rights reserved.</p>
+        <hr />
+    </footer>
+
+    <!-- CDN links https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+    <!-- Script elements added at end of html body to ensure quick loading of page and improve user experience. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/JavaScript" src="contact-us.js"></script>
+  </body>
+</html>
