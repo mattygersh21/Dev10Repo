@@ -1,0 +1,1 @@
+A website for Matty's Magnificent Munchies restaurant is implemented by the related files. The site includes a homepage and menu that are informative and includes a contact form page as well. Navigation between pages is available. Bootstrap elements are included, as is JavaScript validation.
