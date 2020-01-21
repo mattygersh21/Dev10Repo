@@ -1,17 +1,17 @@
 // Name: Matthew Gerszewski
 // Date Created: Jan 16, 2020
-// Date last modified: Jan 18, 2020
+// Date last modified: Jan 21, 2020
 // Most recent revision: 0
 
 function validate() {
-  // Purpose - First clear errors and verify that input is valid by making sure it is a positive number. If the input is not valid an error class name is attached to the Starting Bet input field. (This error may be cleared by the clearErr() function on the next call. See clearErr() function below.) If input is valid, next the playUntilBroke function is called to evaluate the outcome of a Lucky Sevens rule set as described here https://lms.thesoftwareguild.com/courses/281/pages/code-practice-lucky-sevens?module_item_id=35721.
+  // Purpose - First, errors are cleared. Then, input is verified as valid by making sure it is a positive number. If the input is not valid an error class name is attached to the parent element of the Starting Bet input field. (This error may be cleared by the clearErr() function on the next call. See clearErr() function below.) If input is valid, next the playUntilBroke function is called to evaluate the outcome of a Lucky Sevens rule set as described here https://lms.thesoftwareguild.com/courses/281/pages/code-practice-lucky-sevens?module_item_id=35721.
   
   clearErr();
   var startingBet = parseInt(document.forms["startingBetForm"]["startingBet"].value, 10);
 
   if(isNaN(startingBet) || startingBet <= 0) {
     alert("In order to play the game, you must have a starting bet that is greater than $0.");
-    document.forms["startingBetForm"]["startingBet"].className = "form-control text-center w-50 has-error";
+    document.forms["startingBetForm"]["startingBet"].parentElement.className = "form-inline has-error";
     document.forms["startingBetForm"]["startingBet"].focus();
     return false;
   }
@@ -23,10 +23,10 @@ function validate() {
 }
 
 function clearErr() {
-  // Purpose - An error class name may be attached to the Starting Bet input field in the event the user enters an invalid starting bet. This function clears that class name error when called.
+  // Purpose - An error class name may be attached to the parent element of the Starting Bet input field in the event the user enters an invalid starting bet. This function clears that class name error when called.
   
-  if(document.forms["startingBetForm"]["startingBet"].className.indexOf("has-error") != -1) {
-    document.forms["startingBetForm"]["startingBet"].className = "form-control text-center w-50"
+  if(document.forms["startingBetForm"]["startingBet"].parentElement.className.indexOf("has-error") != -1) {
+    document.forms["startingBetForm"]["startingBet"].parentElement.className = "form-inline"
   }
 }
 

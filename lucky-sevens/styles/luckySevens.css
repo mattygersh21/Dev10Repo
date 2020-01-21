@@ -1,7 +1,7 @@
 /* 
 Creator: Matthew Gerszewski
 Date created: Jan 16, 2020
-Date last modified: Jan 18, 2020
+Date last modified: Jan 21, 2020
 Most recent revision: 0
 */
 
@@ -16,6 +16,20 @@ h1 {
 @keyframes lucky-sevens-pulse {
   0% {color: red;}
   50% {color: blue;}
+}
+
+/* has-error class was replaced by HTML5 form validation via CSS's :invalid and :valid pseudo classes (https://getbootstrap.com/docs/4.0/migration/#forms-1), however a has-error class name was used to indicate an input error to a user. */
+.has-error input[type=number] {
+  border: 2px solid green;
+  animation-name: has-error-highlight;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes has-error-highlight {
+  0% {border: 4px solid rgba(0, 255, 0, 1);}
+  50% {border: 2px solid rgba(0, 255, 0, 0.1);}
+  100% {border: 4px solid rgba(0, 255, 0, 1);}
 }
 
 button {
