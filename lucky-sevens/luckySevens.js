@@ -59,7 +59,7 @@ function playUntilBroke(startingBet) {
 
     if(gameMoney > maxAmount) {
       maxAmount = gameMoney;
-      rollCountAtMaxAmount = rollCounter
+      rollCountAtMaxAmount = rollCounter;
     }
   }
 

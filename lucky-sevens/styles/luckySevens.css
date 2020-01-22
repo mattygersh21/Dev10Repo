@@ -20,7 +20,6 @@ h1 {
 
 /* has-error class was replaced by HTML5 form validation via CSS's :invalid and :valid pseudo classes (https://getbootstrap.com/docs/4.0/migration/#forms-1), however a has-error class name was used to indicate an input error to a user. */
 .has-error input[type=number] {
-  border: 2px solid green;
   animation-name: has-error-highlight;
   animation-duration: 3s;
   animation-iteration-count: infinite;
